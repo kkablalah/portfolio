@@ -1,0 +1,41 @@
+@media screen and (max-width: 500px) {
+    .container {
+        background-color: red;
+    }
+}
+
+.intro {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    width: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+    margin: auto;
+}
+
+#hek {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
+    margin-top:1vh;
+}
+
+#1sect {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
+    margin-top:1vh;
+}
