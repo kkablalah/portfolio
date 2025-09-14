@@ -4,14 +4,14 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kena - Mit Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="./Kena - Mit Portfolio_files/Portfølje.css">
+    <link rel="stylesheet" type="text/css" href="styles1.css">
 </head>
 <body>
-<header class="intro"> Introducere - Kenadid Kablalah </header>
+<header class="intro"> <h1>Introducere - Kenadid Kablalah</h1> </header>
 <main class="container"></main>
 <h1 id="hek">Hvem er Kena?</h1>
-<section id="1sect">
-    <p> Lidt om mig </p>
+<section id="sect1">
+    <h2> Lidt om mig </h2>
         <ul>
         <li>
             Motiveret og afslappet IT-studerende på 23 år, som er i gang med en Professionsbachelor i IT-Arkitektur ved Erhvervsakademi København.
@@ -24,115 +24,52 @@
         </li>
     </ul>
 </section>
-<section id="2sect">
-    <p>
-        Uddannelser.
-    </p>
-    <ol>
-        <li>
-            Professionsbachelor i IT-Arkitektur, Erhvervsakademi København (2025–nu)
-        </li>
-        <li>
-            Elektriker, TEC (Teknisk Erhvervsskole, København)
-        </li>
-        <li>
-            HF (Højere Forberedelseseksamen)
-        </li>
-        <li>
-            9.–10. Klasse, Danmark
-        </li>
-    </ol>
-
+<section id="sect2">
+    <details>
+        <summary><h2>Uddannelser</h2></summary>
+        <ul>
+            <li>Professionsbachelor i IT-Arkitektur, Erhvervsakademi København (2025–nu)</li>
+            <li>Elektriker, TEC (Teknisk Erhvervsskole, København)</li>
+            <li>HF (Højere Forberedelseseksamen)</li>
+            <li>9–10. Klasse, Danmark</li>
+        </ul>
+    </details>
 </section>
-<section id="3sect">
-    <nav>
-        <p>
-            Erhvervserfaring
-        </p>
+<section id="sect3">
+    <details>
+        <summary><h2>Erhvervserfaring</h2></summary>
         <ul>
-            <li>
-                Kurérpartner (Wolt) - 2021-2023.
-            </li>
-        </ul>
-        <ul>
-            <li>
-                Sælger/Lånkonsulent (Sambla) - 2023.
-            </li>
-        </ul>
-        <ul>
-            <li>
-                Freelancing: Alt fra krypto til UI/GX og videoredigering osv.
-            </li>
-        </ul>
-    </nav>
-    <nav>
-        <p>
-            Kontaktoplysninger
-        </p>
-        <ul>
-            <li>
-                    E-Mail
-                <ol>
-                    <li>keal1000@stud.ek.dk</li>
-                    <li>kkablalah@gmail.com</li>
-                </ol>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                Discord: @fosterfather
-            </li>
-        </ul>
-        <ul>
-            <li>
-                GitHub: <a href="https://github.com/kkablalah">Min Profil - kkablalah.</a>
-            </li>
-        </ul>
-    </nav>
+            <li>Kurérpartner (Wolt) - 2021-2023.</li>
+            <li>Sælger/Lånkonsulent (Sambla) - 2023.</li>
+                        <li>
+                            Freelancing: UI/GX og videoredigering osv. 
+                        </li>
+                    </ul>
+
+        </details>
 </section>
-
-
-<img src="http://localhost:63342/Webteknologi/.idea/1.%20Main/Projekt%20Portfolie%20-%201/index.html?_ijt=ki88i1gs6q7knh97q8hderh2pj&amp;_ij_reload=RELOAD_ON_SAVE">
-
-<details> <summary> test 123 </summary></details>
-<footer class="end"></footer>
-
-
-
-<script>
-(function() {
-  var ws = new WebSocket('ws://' + window.location.host + 
-             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
-             'referrer=' + encodeURIComponent(window.location.pathname));
-  ws.onmessage = function (msg) {
-      if (msg.data === 'reload') {
-          window.location.reload();
-      }
-      if (msg.data.startsWith('update-css ')) {
-          var messageId = msg.data.substring(11);
-          var links = document.getElementsByTagName('link');
-          for (var i = 0; i < links.length; i++) {
-              var link = links[i];
-              if (link.rel !== 'stylesheet') continue;
-              var clonedLink = link.cloneNode(true);
-              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
-              if (newHref !== link.href) {
-                clonedLink.href = newHref;
-              }
-              else {
-                var indexOfQuest = newHref.indexOf('?');
-                if (indexOfQuest >= 0) {
-                  // to support ?foo#hash 
-                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
-                                    newHref.substring(indexOfQuest + 1);
-                }
-                else {
-                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
-                }
-              }
-              link.replaceWith(clonedLink);
-          }
-      }
-  };
-})();
-</script></body></html>
+<section id="sect4">
+        <details>
+            <summary>
+                <h2>Kontaktoplysninger</h2>
+            </summary>
+                    <ul>
+                        <li>
+                            Email
+                            <ol>
+                                <li> keal1000@stud.ek.dk</li>
+                                <li>kkablalah@gmail.com</li>
+                            </ol>
+                        </li>
+                        <li>
+                            Discord: @fosterfather
+                        </li>
+                        <li>
+                            GitHub: <a href="https://github.com/kkablalah">Min Profil - kkablalah.</a>
+                        </li>
+                    </ul>
+        </details>
+</section>
+<footer class="end">
+        <p id="MP1">&copy; 2025 | Kenadid Kablalah.</p>
+</footer>
